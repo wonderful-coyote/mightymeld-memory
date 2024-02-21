@@ -6,7 +6,12 @@ function App() {
 
   switch (gameState) {
     case "start":
-      return <StartScreen start={() => setGameState("play")} />;
+      return (
+        <StartScreen
+          start={() => setGameState("play")}
+          className="flex justify-center items-center"
+        />
+      );
     case "play":
       return <PlayScreen end={() => setGameState("start")} />;
     default:
